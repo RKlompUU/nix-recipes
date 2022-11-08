@@ -1,0 +1,4 @@
+PGHOST=localhost
+PGPORT=5555
+PGUSER=dev
+PGDATABASE=postgres

@@ -33,19 +33,14 @@ mkShell {
   shellHook = "mkdir -p " + target + "; " + ''
     echo "Using ${postgresql_14.name}."
 
-    # Setup: other env variables
-    export PGHOST="$PGDATA"
-    # Setup: DB
-    [ ! -d $PGDATA ] && pg_ctl initdb -o "-U dev" && cat "$postgresConf" >> $PGDATA/postgresql.conf
-    pg_ctl -o "-p 5555 -k $PGDATA" start && {
+    set -a
+    source ./env
+    set +a
+
+    [ ! -d $PGDATA ] && PGHOST="$PGDATA" pg_ctl initdb -o "-U $PGUSER" && cat "$postgresConf" >> $PGDATA/postgresql.conf
+
+    pg_ctl -o "-p $PGPORT -k $PGDATA" start && {
       trap 'pg_ctl stop' EXIT
     }
-    alias fin="pg_ctl stop && exit"
-
-    export PGPORT=5555
-    export PGUSER=dev
-    export PGPASSWORD=dev
-    export PGHOST=localhost
-    export PGDATABASE=postgres
   '';
 }
