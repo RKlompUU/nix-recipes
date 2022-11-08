@@ -1,5 +1,16 @@
 # Posgres server
 
+This is a nix solution for setting up (temporary) Postgres server(s) for dev
+work. State is stored on disk (in this folder, under database instance named
+subfolders), and thus will survive reboots.
+
+Unlike running with Docker, applying this will allow to execute Postgres
+natively (this may be especially nice on MacOS, where Docker is entirely
+virtualized). Subjectively it's also simply more fun to run Postgres natively
+as opposed to through the dockerized image :)
+
+## How to run
+
 To start, execute `./run`. The terminal will drop into a session where in the background the postgres server is running. While in this session, executing`psql` will enter the database. `./run` optionally accepts a database instance name, defaults to `default`.
 
 To stop, Ctrl+d or execute `exit`, or execute `fin`.
