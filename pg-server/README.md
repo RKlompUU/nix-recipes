@@ -23,4 +23,4 @@ Credits to the main inspiration: https://zeroes.dev/p/nix-recipe-for-postgresql/
 
 ## Connecting to the server
 
-See env file for connection settings (pg user, password, etc.).
+See `./env` for connection settings (pg user, password, etc.), these may be changed.
