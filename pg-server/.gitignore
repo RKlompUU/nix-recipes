@@ -1,0 +1,7 @@
+*
+!.gitignore
+
+!shell.nix
+
+!run
+!logs

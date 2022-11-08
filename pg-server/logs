@@ -1,0 +1,10 @@
+#!/bin/bash
+
+(
+    folder="${1:-default}/.pg/logs"
+    for f in `ls "$folder" | sort -n`; do
+        echo "----"
+        echo "--$f"
+        cat "$folder/$f"
+    done
+) | less
