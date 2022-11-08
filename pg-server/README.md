@@ -19,7 +19,7 @@ When a session is running and in another terminal `./run` is executed, postgres 
 
 `logs` is a convenience script to print all logs (that may be distributed over multiple files).
 
-Credits to main inspiration: https://zeroes.dev/p/nix-recipe-for-postgresql/
+Credits to the main inspiration: https://zeroes.dev/p/nix-recipe-for-postgresql/
 
 ## Connecting to the server
 
