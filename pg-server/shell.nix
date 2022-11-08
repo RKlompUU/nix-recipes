@@ -11,14 +11,12 @@ mkShell {
   postgresConf =
     writeText "postgresql.conf"
       ''
-        # Add Custom Settings
         log_min_messages = warning
         log_min_error_statement = error
         log_min_duration_statement = 100  # ms
         log_connections = on
         log_disconnections = on
         log_duration = on
-        #log_line_prefix = '[] '
         log_timezone = 'UTC'
         log_statement = 'all'
         log_directory = 'logs'
