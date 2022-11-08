@@ -13,7 +13,7 @@ as opposed to through the dockerized image :)
 
 To start, execute `./run`. The terminal will drop into a session where in the background the postgres server is running. While in this session, executing `psql` will enter the database. `./run` optionally accepts a database instance name, defaults to `default`.
 
-To stop, Ctrl+d or execute `exit`, or execute `fin`.
+To stop, Ctrl+d or execute `exit`.
 
 When a session is running and in another terminal `./run` is executed, postgres is _not_ started again, environment variables are set appropriately however and so this can be useful to enter the database in another terminal with `psql`.
 
