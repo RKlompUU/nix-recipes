@@ -23,4 +23,4 @@ Credits to the main inspiration: https://zeroes.dev/p/nix-recipe-for-postgresql/
 
 ## Connecting to the server
 
-See `./env` for connection settings (pg user, password, etc.), you're free to change these prior to initialization of a new database instance (i.e. each first `./run` execution of a new instance will initialize according to the settings in `./env`).
+See `./env` for connection settings (user, port, etc.), you're free to change these prior to initialization of a new database instance (i.e. each first `./run` execution of a new instance will initialize according to the settings in `./env`).
