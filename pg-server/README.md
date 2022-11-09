@@ -1,6 +1,6 @@
 # Posgres server
 
-This is a nix solution for setting up (temporary) Postgres server(s) for dev
+This is a nix solution for running (temporary) Postgres servers for dev
 work. State is stored on disk (in this folder, under database instance named
 subfolders), and thus will survive reboots.
 
