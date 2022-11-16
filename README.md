@@ -15,7 +15,7 @@ til `/`, by adding the following to your .bashrc:
 function nix-shell-wrapped {
     path="$(pwd)"
     while [[ "$path" != "" && ! -e "$path/shell.nix" ]]; do
-        path=${path%/*}
+        path="${path%/*}"
     done
     shell_path="$path/shell.nix"
     [ -e "$shell_path" ] || {
