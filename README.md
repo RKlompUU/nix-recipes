@@ -1,4 +1,4 @@
-# nix-recipies
+# nix-recipes
 
 I will be sharing any interesting small nix applications here.
 
