@@ -31,7 +31,7 @@ function nix-shell-parent {
     fi
 
     [[ "$shellFile" == "" ]] && {
-        echo 'no shell.nix found in . / .. / etc.'
+        echo 'no default.nix/shell.nix found in . / .. / etc.'
         return 1
     }
     echo "entering nix shell with $shellFile"
