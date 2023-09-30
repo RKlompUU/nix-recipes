@@ -4,8 +4,9 @@ with pkgs;
 mkShell {
   name = "postgres-env";
   buildInputs = [
-    postgresql_14
+    postgresql_15
     less
+    glibcLocales
   ];
 
   postgresConf =
@@ -29,7 +30,7 @@ mkShell {
   PGDATA = "${toString ./.}/" + target + "/.pg";
 
   shellHook = "mkdir -p " + target + "; " + ''
-    echo "Using ${postgresql_14.name}."
+    echo "Using ${postgresql_15.name}."
 
     set -a
     source ./env
