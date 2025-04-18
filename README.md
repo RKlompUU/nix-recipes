@@ -2,6 +2,10 @@
 
 I will be sharing any interesting small nix applications here.
 
+## Pyshell
+
+Go to [pyshell](pyshell#pyshell) for an easy to use python venv wrapper.
+
 ## Postgres server
 
 Go to [pg-server](pg-server#posgres-server), for simple setup and execution of
